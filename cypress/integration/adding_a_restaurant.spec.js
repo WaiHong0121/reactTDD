@@ -8,6 +8,7 @@ describe("adding a restaurant", () => {
     cy.get('[data-test="addRestaurantButton"]').click();
     cy.get('[data-test="newRestaurantName"]').type("Sushi Place");
     cy.get('[data-test="saveNewRestaurantButton"]').click();
+    cy.get('[data-test="newRestaurantName"]').should("not.exist");
     cy.contains("Sushi Place");
   });
 });
