@@ -23,5 +23,4 @@ jobs:
           paths:
             - ~/.npm
             - ~/.cache
-      - run: npm start & wait-on http://localhost:1234
       - run: $(npm bin)/cypress run --record --key <record_key>
